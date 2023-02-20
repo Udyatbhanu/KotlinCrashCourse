@@ -4,15 +4,40 @@ fun main() {
     println(getGreeting("s"))
 }
 
+/**
+ * ==
+ * !=
+ * ===
+ * !==
+ * >
+ * <
+ * >=
+ * <=
+ *
+ *
+ * &&
+ * ||
+ */
 private fun getGreeting(command: String): String {
 
-    if (command == "m") {
-        return "Good morning"
+   val result =  if (command == "m") {
+         "Good morning"
     } else if(command == "e"){
-        return "Good Evening"
+         "Good Evening"
     } else{
-        return "Hello"
+         "Hello"
     }
 
+//    val result = when(command){
+//        "m" -> {
+//            val good = "Good"
+//            val morning = "Morning"
+//            good.plus(" ").plus(morning)
+//        }
+//        "e" -> "Good Evening"
+//        else -> "Hello"
+//    }
+
+    return result
 
 }
