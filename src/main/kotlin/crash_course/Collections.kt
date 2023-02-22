@@ -12,11 +12,11 @@ fun main(){
     var fruitListImmutableVar = listOf("Apples", "Oranges", "Pears", "Grapes")
     var fruitListMutableVar = mutableListOf("Apples", "Oranges", "Pears", "Grapes")
 
-    fruitListImmutableVar = emptyList()
-    fruitListMutableVar = emptyList<String>().toMutableList()
-    fruitListMutableVar.add("Cherries")
+    var fruitListMutableVarArrayList = arrayListOf("Apples", "Oranges", "Pears", "Grapes")
+
+    fruitListMutableVarArrayList.add("Cherries")
 
 
 
-    println(fruitListMutableVar.size)
+    println(fruitListMutableVarArrayList[1])
 }
