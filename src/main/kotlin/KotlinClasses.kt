@@ -1,8 +1,9 @@
-class Person(val age : Int) : Any(){
+class Person(age : Int) {
 
-    override fun toString() : String{
-        return "This is a person object"
+    init{
+        println("This is the init block")
     }
+
 
 
 
@@ -11,8 +12,7 @@ class Person(val age : Int) : Any(){
 }
 
 fun main(){
-    val person  = Person(20)
-    val person1 = Person(25)
+    val person1 = Person(20)
+    val person2 = Person(20)
 
-    println(person)
 }
