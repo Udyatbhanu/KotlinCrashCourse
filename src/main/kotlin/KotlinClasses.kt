@@ -1,7 +1,5 @@
-abstract class Person{
+abstract class Person(name : String){
     var age : Int = 0
-
-
     abstract fun walk()
 
 }
@@ -14,7 +12,7 @@ interface Talker{
     fun talk()
 }
 
-class Man() : Person() , Runner, Talker {
+class Man(name : String) : Person(name) , Runner, Talker {
 
     override fun walk() {
        println("Man Walking")
@@ -35,7 +33,7 @@ class Man() : Person() , Runner, Talker {
 
 fun main() {
 
-    val man = Man()
+    val man = Man("Jack")
     man.age
 
 }
