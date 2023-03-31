@@ -1,24 +1,28 @@
-class Person() {
+abstract class Person() {
+    var age : Int = 0
 
-    var greeting: String = "Hello"
-        get() = field.plus(" ").plus("Kotlin")
-        set(value) {
-            field = value.plus(" ").plus("World")
-        }
+    open fun talk(){
+        println("Talking")
+    }
 
-    var age: Int = -1
-//        get() = field
-//        set(value) {
-//            field = value
-//        }
-
+    abstract fun walk()
 
 }
 
-fun main() {
-    val person = Person()
-    person.greeting = "Hello"
-    println(person.greeting)
+class Man() : Person() {
 
+    override fun walk() {
+       println("Man Walking")
+    }
+
+}
+
+
+
+
+fun main() {
+
+    val man = Man()
+    man.age
 
 }
