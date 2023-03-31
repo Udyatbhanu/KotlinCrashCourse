@@ -1,18 +1,31 @@
-abstract class Person() {
+abstract class Person{
     var age : Int = 0
 
-    open fun talk(){
-        println("Talking")
-    }
 
     abstract fun walk()
 
 }
 
-class Man() : Person() {
+interface Runner{
+    fun run()
+}
+
+interface Talker{
+    fun talk()
+}
+
+class Man() : Person() , Runner, Talker {
 
     override fun walk() {
        println("Man Walking")
+    }
+
+    override fun run() {
+      println("Run")
+    }
+
+    override fun talk() {
+        println("Talk")
     }
 
 }
