@@ -1,39 +1,19 @@
-abstract class Person(name : String){
-    var age : Int = 0
-    abstract fun walk()
 
-}
+fun interface Logger{
+    fun log() : Boolean
 
-interface Runner{
-    fun run()
-}
+    fun logSomethingMore(){
 
-interface Talker{
-    fun talk()
-}
-
-class Man(name : String) : Person(name) , Runner, Talker {
-
-    override fun walk() {
-       println("Man Walking")
     }
-
-    override fun run() {
-      println("Run")
-    }
-
-    override fun talk() {
-        println("Talk")
-    }
-
 }
-
-
 
 
 fun main() {
 
-    val man = Man("Jack")
-    man.age
+    val logger = Logger {
+        println("Log this")
+        true
+    }
+
 
 }
