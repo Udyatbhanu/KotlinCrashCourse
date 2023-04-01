@@ -1,14 +1,18 @@
 
 
-  interface Logger{
-    fun log()
+fun interface Logger{
+    fun log() : Boolean
 
-    fun logSomethingElse()
+    fun logger(){
+
+    }
 }
-
 fun main() {
 
-    val logger = Logger { println("Log") }
+    val logger = Logger {
+        println("Log")
+        true
+    }
 
 
 }
