@@ -1,18 +1,31 @@
 
 
-fun interface Logger{
-    fun log() : Boolean
+class Logger{
 
-    fun logger(){
+    interface FrontEndLogger{
+        fun log()
 
+        fun logMore(){
+
+        }
     }
+
+
+}
+
+
+fun logFrontEnd(logger : Logger.FrontEndLogger){
+    logger.log()
 }
 fun main() {
 
-    val logger = Logger {
-        println("Log")
-        true
+    val logger = object : Logger.FrontEndLogger{
+        override fun log() {
+            println("Log frontend")
+        }
     }
+
+    logFrontEnd(logger)
 
 
 }
