@@ -9,10 +9,29 @@ abstract class Person() {
 
 }
 
-class Man() : Person() {
+
+interface Alien{
+    fun doAlienThings() {
+
+    }
+}
+
+
+interface Cyborg{
+    fun doCyborgThings()
+}
+
+
+class Man() : Person(), Alien, Cyborg {
 
     override fun walk() {
        println("Man Walking")
+    }
+
+
+
+    override fun doCyborgThings() {
+        TODO("Not yet implemented")
     }
 
 }
@@ -22,7 +41,7 @@ class Man() : Person() {
 
 fun main() {
 
-    val man = Man()
-    man.age
+    val man = Man() as Cyborg
+    man.doCyborgThings()
 
 }
